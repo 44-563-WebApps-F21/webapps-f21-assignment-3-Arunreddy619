@@ -1,75 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Page Title</title>
+    <title>Page Title</title>
 </head>
+
 <body>
 
-<h1>Arun Reddy Kakunuri</h1>
-<h2>HYDERABAD</h2>
-<p>The city is popularly known for its <strong>delicious</strong>  offering in various <strong>foods and cuisine</strong>. The biryani, irani chai, wide array in kebabs, tandoori chicken, shawarma, haleem, qubani ka mitha, are some of the commonly loved dishes and the list is endless!</p>
-<hr>
-<h1>Travelling Directions</h1>
-<ol>
-    <li>Marryville - Kansas city(MCI)</li>
-    <li>kansas city - Chicago(ORD)</li>
-    <li>Chicago - Delhi(IGI)</li>
-    <li>Delhi - Hyderabad(RGI)</li>
-  </ol>
-  <ul>
-    <li>Pens</li>
-    <li>note books</li>
-    <li>laptop</li>
-    <li>phone</li>
-  </ul>
-  
+    <h1>Arun Reddy Kakunuri</h1>
+    <h2>HYDERABAD</h2>
+    <p>The city is popularly known for its <strong>delicious</strong> offering in various <strong>foods and
+            cuisine</strong>. The biryani, irani chai, wide array in kebabs, tandoori chicken, shawarma, haleem, qubani
+        ka mitha, are some of the commonly loved dishes and the list is endless!</p>
+    <hr>
+    <h1>Travelling Directions</h1>
+    <ol>
+        <li>Marryville - Kansas city(MCI)</li>
+        <li>kansas city - Chicago(ORD)</li>
+        <li>Chicago - Delhi(IGI)</li>
+        <li>Delhi - Hyderabad(RGI)</li>
+    </ol>
+    <ul>
+        <li>Pens</li>
+        <li>note books</li>
+        <li>laptop</li>
+        <li>phone</li>
+    </ul>
 
 
-<a href="C:\Users\S544721\Desktop\webapps-repos\webapps-f21-assignment-3-Arunreddy619\aboutme.html">aboutme</a>
-<hr>
-<style>
-    table, th, td {
-      border:1px solid black;
-    }
+
+    <a href="C:\Users\S544721\Desktop\webapps-repos\webapps-f21-assignment-3-Arunreddy619\aboutme.html">aboutme</a>
+    <hr>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
     </style>
-<p>Recomended Drinks/Food in Resturants</p>
-<table>
-    <tr>
-      <th>Drinks/Food</th>
-      <th>Location</th>
-      <th>Amount</th>
-    </tr>
-  
-    <tr>
-      <td>Diet coke</td>
-      <td>Burger king</td>
-      <td>$1</td>
-    </tr>
+    <p>Recomended Drinks/Food in Resturants</p>
+    <table>
+        <tr>
+            <th>Drinks/Food</th>
+            <th>Location</th>
+            <th>Amount</th>
+        </tr>
 
-    <tr>
-        <td>Nuggets</td>
-        <td>Mc donalds</td>
-        <td>$2</td>
-      </tr>
+        <tr>
+            <td>Diet coke</td>
+            <td>Burger king</td>
+            <td>$1</td>
+        </tr>
 
-      <tr>
-        <td>fries</td>
-        <td>Tacobell</td>
-        <td>$4</td>
-      </tr>
+        <tr>
+            <td>Nuggets</td>
+            <td>Mc donalds</td>
+            <td>$2</td>
+        </tr>
 
-      <tr>
-        <td>Pizza</td>
-        <td>Dominos</td>
-        <td>$7</td>
-      </tr>
-</table>
--</hr>
-<hr>
+        <tr>
+            <td>fries</td>
+            <td>Tacobell</td>
+            <td>$4</td>
+        </tr>
 
-<blockquote cite="https://en.wikipedia.org/wiki/Longest_increasing_subsequence">
-In computer science, the longest increasing subsequence problem is to find a subsequence of a given sequence in which the subsequence's elements are in sorted order, lowest to highest, and in which the subsequence is as long as possible. This subsequence is not necessarily contiguous, or unique. Longest increasing subsequences are studied in the context of various disciplines related to mathematics, including algorithmics, random matrix theory, representation theory, and physics. The longest increasing subsequence problem is solvable in time O(n log n), where n denotes the length of the input sequence.
-</blockquote>
-</hr>
+        <tr>
+            <td>Pizza</td>
+            <td>Dominos</td>
+            <td>$7</td>
+        </tr>
+    </table>
+    </hr>
+    <hr>
+
+    <blockquote cite="https://en.wikipedia.org/wiki/Longest_increasing_subsequence">
+        In computer science, the longest increasing subsequence problem is to find a subsequence of a given sequence in
+        which the subsequence's elements are in sorted order, lowest to highest, and in which the subsequence is as long
+        as possible. This subsequence is not necessarily contiguous, or unique. Longest increasing subsequences are
+        studied in the context of various disciplines related to mathematics, including algorithmics, random matrix
+        theory, representation theory, and physics. The longest increasing subsequence problem is solvable in time O(n
+        log n), where n denotes the length of the input sequence.
+    </blockquote>
+
+    <a href="https://en.wikipedia.org/wiki/Longest_increasing_subsequence"> Quick link</a>
+
+    </hr>
+    <hr>
+
+    <pre>int lis(vector<int> const& a) {
+        int n = a.size();
+        vector<int> d(n, 1);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                if (a[j] < a[i])
+                    d[i] = max(d[i], d[j] + 1);
+            }
+        }
+    
+        int ans = d[0];
+        for (int i = 1; i < n; i++) {
+            ans = max(ans, d[i]);
+        }
+        return ans;
+    }</pre>
+    </hr>
 </body>
-</html>
+
+</html> 
